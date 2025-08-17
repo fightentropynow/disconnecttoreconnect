@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Detox - Reconnect with Calm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title" data-i18n="title">Digital Detox</h1>
+            <p class="subtitle" data-i18n="subtitle">Disconnect to Reconnect</p>
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+                <button id="lang-es" class="lang-btn" data-lang="es">ES</button>
+            </div>
+        </header>
+
+        <!-- Main relaxation area -->
+        <main class="main-content">
+            <!-- Timer display -->
+            <div class="timer-section">
+                <div class="timer-display">
+                    <span id="timer-minutes">15</span>:<span id="timer-seconds">00</span>
+                </div>
+                <p class="timer-label" data-i18n="minutes-of-calm">Minutes of calm</p>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="start-btn" class="btn primary" data-i18n="begin-session">Begin Session</button>
+                <button id="pause-btn" class="btn secondary" style="display: none;" data-i18n="pause">Pause</button>
+                <button id="reset-btn" class="btn tertiary" data-i18n="reset">Reset</button>
+            </div>
+
+            <!-- Session duration selector -->
+            <div class="duration-selector">
+                <label for="duration" data-i18n="session-duration">Session Duration:</label>
+                <select id="duration">
+                    <option value="5" data-i18n="5-minutes">5 minutes</option>
+                    <option value="10" data-i18n="10-minutes">10 minutes</option>
+                    <option value="15" selected data-i18n="15-minutes">15 minutes</option>
+                    <option value="30" data-i18n="30-minutes">30 minutes</option>
+                </select>
+            </div>
+
+            <!-- Audio controls -->
+            <div class="audio-controls">
+                <button id="audio-toggle" class="btn audio-btn" data-i18n="enable-sound">🔇 Enable Sound</button>
+                <div class="volume-control">
+                    <label for="volume" data-i18n="volume">Volume:</label>
+                    <input type="range" id="volume" min="0" max="100" value="50">
+                </div>
+            </div>
+        </main>
+
+        <!-- Floating elements for relaxation -->
+        <div class="floating-elements">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="floating-circle circle-4"></div>
+            <div class="floating-circle circle-5"></div>
+            <div class="floating-triangle triangle-1"></div>
+            <div class="floating-triangle triangle-2"></div>
+            <div class="floating-hexagon hexagon-1"></div>
+            <div class="floating-diamond diamond-1"></div>
+        </div>
+
+        <!-- Progress indicator -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Breathing guide -->
+        <div class="breathing-guide" id="breathing-guide">
+            <div class="breathing-circle">
+                <span class="breathing-text" id="breathing-text" data-i18n="breathe">Breathe</span>
+            </div>
+        </div>
+
+        <!-- Instructions overlay -->
+        <div class="instructions" id="instructions">
+            <div class="instructions-content">
+                <h2 data-i18n="welcome-title">Welcome to Your Digital Detox</h2>
+                <p data-i18n="welcome-description">Take this time to disconnect from digital distractions and reconnect with inner calm.</p>
+                <div class="instructions-list">
+                    <h3 data-i18n="prepare-title">To prepare for your session:</h3>
+                    <ul>
+                        <li data-i18n="instruction-1">📱 Put your phone in another room or airplane mode</li>
+                        <li data-i18n="instruction-2">💻 Close all social media tabs and notifications</li>
+                        <li data-i18n="instruction-3">🧘 Find a comfortable, quiet space</li>
+                        <li data-i18n="instruction-4">🌬️ Focus on slow, deep breathing</li>
+                        <li data-i18n="instruction-5">🧠 Allow your mind to naturally settle and calm</li>
+                        <li data-i18n="instruction-6">🎧 Use headphones for the best audio experience</li>
+                    </ul>
+                </div>
+                <button id="close-instructions" class="btn primary" data-i18n="start-journey">Start Your Journey</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element for white noise -->
+    <audio id="white-noise" loop>
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBjWAzvLRwSkGKXnL8Ni+dSgBGWu98YOQOTUF" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
